@@ -8,11 +8,30 @@
   <script src="asteroids.js" defer></script>
 </head>
 <body>
-  <div id="container">
-    <canvas id="my-canvas">
-
-    </canvas>
+  <div id="start-page" class="page">
+    <h1>Asteroids Game 🚀</h1>
+    <p>Instructions:</p>
+    <ul>
+      <li>Use W or UP arrow to move forward</li>
+      <li>Use A or LEFT arrow to rotate left</li>
+      <li>Use D or RIGHT arrow to rotate right</li>
+      <li>Use SPACE to shoot</li>
+    </ul>
+    <button id="play-button">Play</button>
+    <button id="sound-button">Sound: On</button>
   </div>
+  <div id="game-page" class="page" style="display: none;">
+    <div id="pause-button" class="pause-button">&#9208;</div>
+    <div id="sound-button-game" class="sound-button-game">&#9835;</div>
 
+    <div id="container">
+      <canvas id="my-canvas">
+      </canvas>
+    </div>
+    <audio id="gameMusic" loop>
+      <source src="lost-in-space.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
 </body>
 </html>
