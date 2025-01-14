@@ -102,6 +102,10 @@ button:active {
   transform: scale(0.98);
 }
 
+
+/* front page ends here */
+
+
 .pause-button {
   position: absolute;
   top: 80px;
