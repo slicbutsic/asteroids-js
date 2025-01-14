@@ -6,29 +6,36 @@
   <title>Asteroids</title>
   <link rel="stylesheet" href="style.css">
   <script src="asteroids.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div id="start-page" class="page">
-    <h1>Asteroids Game 🚀
-    </h1>
+    <h1>Asteroids Game <span class="rocket">🚀</span></h1>
+    <div class="instructions">
+      <h2>Instructions:</h2>
+      <ul>
+        <li><span class="key">W</span> or <span class="key">↑</span> Move forward</li>
+        <li><span class="key">A</span> or <span class="key">←</span> Rotate left</li>
+        <li><span class="key">D</span> or <span class="key">→</span> Rotate right</li>
+        <li><span class="key">SPACE</span> Shoot</li>
+      </ul>
 
-    <p>Instructions:</p>
-    <ul>
-      <li>Use W or UP arrow to move forward</li>
-      <li>Use A or LEFT arrow to rotate left</li>
-      <li>Use D or RIGHT arrow to rotate right</li>
-      <li>Use SPACE to shoot</li>
-    </ul>
-    <button id="play-button">Play</button>
-    <button id="sound-button">Sound: On</button>
+      <div class="sound-warning">
+        🔊 Warning: Game audio may be loud. Please adjust volume or turn sound off.
+      </div>
+
+      
+    </div>
+    <div class="button-container">
+      <button id="play-button">Play Game</button>
+      <button id="sound-button">Sound: On</button>
+    </div>
   </div>
   <div id="game-page" class="page" style="display: none;">
-    <div id="pause-button" class="pause-button">&#9208;</div>
-    <div id="sound-button-game" class="sound-button-game">&#9835;</div>
-
+    <div id="pause-button" class="game-control">⏸️</div>
+    <div id="sound-button-game" class="game-control">🔊</div>
     <div id="container">
-      <canvas id="my-canvas">
-      </canvas>
+      <canvas id="my-canvas"></canvas>
     </div>
     <audio id="gameMusic" loop>
       <source src="lost-in-space.mp3" type="audio/mp3">
